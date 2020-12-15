@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://vnv7h3.coding-pages.com/2020/04/17/Hexo-Theme-LiveMyLife/</loc>
+    
+    <lastmod>2020-12-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://vnv7h3.coding-pages.com/2020/12/15/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%BB%8B%E7%BB%8D/</loc>
     
     <lastmod>2020-12-15</lastmod>
@@ -16,6 +23,13 @@
   </url>
   
   <url>
+    <loc>https://vnv7h3.coding-pages.com/archive/index.html</loc>
+    
+    <lastmod>2020-12-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://vnv7h3.coding-pages.com/about/index.html</loc>
     
     <lastmod>2020-12-15</lastmod>
@@ -24,20 +38,6 @@
   
   <url>
     <loc>https://vnv7h3.coding-pages.com/categories/index.html</loc>
-    
-    <lastmod>2020-12-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://vnv7h3.coding-pages.com/archive/index.html</loc>
-    
-    <lastmod>2020-12-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://vnv7h3.coding-pages.com/2020/04/17/Hexo-Theme-LiveMyLife/</loc>
     
     <lastmod>2020-12-15</lastmod>
     
