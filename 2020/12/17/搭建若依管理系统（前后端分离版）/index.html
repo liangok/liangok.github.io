@@ -209,13 +209,6 @@
 
           
           <li>
-            <a href="/about/">About</a>
-          </li>
-          
-          
-
-          
-          <li>
             <a href="/archive/">Archives</a>
           </li>
           
@@ -223,7 +216,7 @@
 
           
           <li>
-            <a href="/categories/">Categories</a>
+            <a href="/about/">About</a>
           </li>
           
           
@@ -231,6 +224,13 @@
           
           <li>
             <a href="/tags/">Tags</a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a href="/categories/">Categories</a>
           </li>
           
           
@@ -423,36 +423,35 @@
 <h2 id="文件结构"><a class="header-anchor" href="#文件结构">¶</a>文件结构</h2>
 <p>这个文件的目录有两个主要的文件<code>ruoyi-ui</code>和<code>ruoyi</code>，其中<code>ruoyi-ui</code>是前端项目，<code>ruoyi</code>是后端项目。</p>
 <p><img src="1.PNG" alt="1"></p>
-<p><img src="C:%5CUsers%5Cliang%5CDesktop%5C1.PNG" alt="1"></p>
 <h2 id="项目配置"><a class="header-anchor" href="#项目配置">¶</a>项目配置</h2>
 <p>先用IDE打开其中的ruoyi文件夹，之后找到<code>ruoyi/src/main/resources/application-druid.yml</code></p>
-<img src="C:\Users\liang\Desktop\3.PNG" alt="3" style="zoom:50%;" />
+<p><img src="2.PNG" alt="2"></p>
 <h3 id="配置数据库"><a class="header-anchor" href="#配置数据库">¶</a>配置数据库</h3>
 <p>找到其中的数据库配置，更改url中的localhost为后端服务器地址</p>
-<p><img src="C:%5CUsers%5Cliang%5CDesktop%5C4.PNG" alt="4"></p>
+<p><img src="4.PNG" alt="4"></p>
 <p>接着使用navicat把后端项目所需要的数据库和数据表数据表建好。</p>
 <h4 id="新建数据库"><a class="header-anchor" href="#新建数据库">¶</a>新建数据库</h4>
-<img src="C:\Users\liang\Desktop\5.PNG" alt="5" style="zoom:50%;" />
+<p><img src="5.PNG" alt="5"></p>
 <h4 id="新建数据表"><a class="header-anchor" href="#新建数据表">¶</a>新建数据表</h4>
 <p>右键选择新建立的数据库</p>
-<img src="C:\Users\liang\Desktop\6.PNG" alt="6" style="zoom:50%;" />
+<p><img src="6.PNG" alt="6"></p>
 <p>点击运行sql文件，sql文件在<code>ruoyi/sql</code>目录下，共两个都要导入。</p>
-<img src="C:\Users\liang\Desktop\7.PNG" alt="7" style="zoom:50%;" />
+<p><img src="7.PNG" alt="7"></p>
 <p>建立完成后就是这样的</p>
-<img src="C:\Users\liang\Desktop\8.PNG" alt="8" style="zoom: 25%;" />
+<p><img src="8.PNG" alt="8"></p>
 <p>接下来配置redis</p>
 <h4 id="配置redis"><a class="header-anchor" href="#配置redis">¶</a>配置redis</h4>
 <p>redis的配置在<code>ruoyi/src/main/resources/application.yml</code></p>
-<img src="C:\Users\liang\Desktop\9.PNG" alt="9" style="zoom:25%;" />
+<p><img src="9.PNG" alt="9"></p>
 <p>最后配置日志</p>
 <h4 id="配置日志"><a class="header-anchor" href="#配置日志">¶</a>配置日志</h4>
 <p>日志的配置路径在<code>ruoyi/src/main/resources/logback.xml</code></p>
-<img src="C:\Users\liang\Desktop\10.PNG" alt="10" style="zoom: 50%;" />
+<p><img src="10.PNG" alt="10"></p>
 <p>其中的日志存放地址我放在了<code>/home/veritasal/logs</code>，并且搜索有所有带<code>&lt;encoder&gt;</code>的都要在下面加上字符集<code>&lt;charset&gt;UTF-8&lt;/charset&gt;</code>。</p>
-<img src="C:\Users\liang\Desktop\11.PNG" alt="11" style="zoom:50%;" />
+<p><img src="11.PNG" alt="11"></p>
 <h2 id="项目部署"><a class="header-anchor" href="#项目部署">¶</a>项目部署</h2>
 <p>先在服务器1和服务器2上的的/root目录上建立一个Web文件夹，用来存放若依的前后端代码。</p>
-<img src="C:\Users\liang\Desktop\2.PNG" alt="2" style="zoom:50%;" />
+<p><img src="2.PNG" alt="2"></p>
 <p>用ftp软件把<code>ruoyi</code>后端代码传到服务器1的<code>/root/Web</code>下，把<code>ruoyi-ui</code>前端代码传到服务器2。这里最好先压缩一下，到服务器上再用<code>unzip</code>命令解压，防止文件丢失。</p>
 <h3 id="部署前端项目"><a class="header-anchor" href="#部署前端项目">¶</a>部署前端项目</h3>
 <p>首先在服务器2进入刚刚拷贝好的ruoyi-ui文件夹</p>
@@ -468,7 +467,7 @@
 <p>编辑nginx.conf文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim nginx.conf</span><br></pre></td></tr></table></figure>
 <p>更改路径为如下：</p>
-<img src="C:\Users\liang\Desktop\12.PNG" alt="12" style="zoom:50%;" />
+<p><img src="12.PNG" alt="12"></p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">   <span class="attribute">location</span> / &#123;</span><br><span class="line">       <span class="attribute">root</span>   /root/Web/ruoyi-ui/dist;</span><br><span class="line">       <span class="attribute">index</span>  index.html index.htm;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"><span class="attribute">location</span> /prod-api/ &#123;</span><br><span class="line">	<span class="attribute">proxy_set_header</span> Host <span class="variable">$http_host</span>;</span><br><span class="line">	<span class="attribute">proxy_set_header</span> X-Real-IP <span class="variable">$remote_addr</span>;</span><br><span class="line">	<span class="attribute">proxy_set_header</span> REMOTE-HOST <span class="variable">$remote_addr</span>;</span><br><span class="line">	<span class="attribute">proxy_set_header</span> X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">	<span class="attribute">proxy_pass</span> http://192.168.2.129:8080/;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="启动nginx"><a class="header-anchor" href="#启动nginx">¶</a>启动nginx</h4>
 <p>进入sbin目录</p>
