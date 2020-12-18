@@ -223,14 +223,14 @@
 
           
           <li>
-            <a href="/tags/">Tags</a>
+            <a href="/categories/">Categories</a>
           </li>
           
           
 
           
           <li>
-            <a href="/categories/">Categories</a>
+            <a href="/tags/">Tags</a>
           </li>
           
           
@@ -403,9 +403,7 @@
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
     </script
-    <body></body>
-  <meta name="generator" content="Hexo 4.2.1"></head>
-  </html>
+    <body>
 <h1>字符串匹配</h1>
 <p>​	字符串匹配有很多用途，比如使用搜索功能查找文本中的一些文字时，就会用到字符串匹配，除此之外，字符串匹配还可以应用于再DNA中搜索特定序列，再网络搜索引擎中查找网页地址。</p>
 <p>​	这里主要介绍四种字符串匹配方法</p>
@@ -511,6 +509,9 @@ $$<br>
 代码如下(这里的Next()函数就是上面说到的$\pi$)</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">Next</span><span class="params">(<span class="keyword">char</span> *p, <span class="keyword">int</span> pl)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>* next;</span><br><span class="line">    next = (<span class="keyword">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * pl);</span><br><span class="line">    next[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> q = <span class="number">1</span>; q &lt; pl; q++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(k &gt; <span class="number">0</span> &amp;&amp; p[k] != p[q])&#123;</span><br><span class="line">            k = next[k - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(p[k] == p[q])&#123;</span><br><span class="line">            k++;</span><br><span class="line">        &#125;</span><br><span class="line">        next[q] = k;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">KMP</span><span class="params">(<span class="keyword">char</span> *t, <span class="keyword">char</span> *p, <span class="keyword">int</span> tl, <span class="keyword">int</span> pl)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> *next = Next(p, pl);</span><br><span class="line">    <span class="keyword">int</span> q = <span class="number">0</span>;  <span class="comment">//numbers of characters matched</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; tl; i++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(q &gt; <span class="number">0</span> &amp;&amp; p[q] != t[i])&#123;</span><br><span class="line">            q = next[q - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(p[q] == t[i])&#123;</span><br><span class="line">            q++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(q == pl)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"Pattern occurs with shift %d\n"</span>, i - pl + <span class="number">2</span>);</span><br><span class="line">            q = next[q];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</body>
+  <meta name="generator" content="Hexo 4.2.1"></head>
+  </html>
 
 
         <hr>
