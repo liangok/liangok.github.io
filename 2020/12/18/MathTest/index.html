@@ -209,6 +209,13 @@
 
           
           <li>
+            <a href="/about/">About</a>
+          </li>
+          
+          
+
+          
+          <li>
             <a href="/archive/">Archives</a>
           </li>
           
@@ -217,13 +224,6 @@
           
           <li>
             <a href="/categories/">Categories</a>
-          </li>
-          
-          
-
-          
-          <li>
-            <a href="/about/">About</a>
           </li>
           
           
@@ -289,7 +289,7 @@
   <style type="text/css">
     header.intro-header {
        /*post*/
-        background-image: url('');
+        background-image: url('/img/header_img/tag_bg.jpg');
       
     }
 
@@ -314,9 +314,11 @@
           <div class="post-heading">
             <div class="tags">
               
+              <a class="tag" href="/tags/#MathJax" title="MathJax">MathJax</a>
+              
             </div>
             <h1>MathTest</h1>
-            <h2 class="subheading"></h2>
+            <h2 class="subheading">数学公式测试</h2>
             <span class="meta">
               Posted by Veritasal on
               2020-12-18
@@ -331,7 +333,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">29</span> In Total
+              Words <span class="post-count">327</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- 不蒜子统计 start -->
@@ -391,7 +393,11 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>html</p>
+        <p>前些天一直在尝试各种方法给这个主题按插件，想要让支持MathJax，试了各种方法都不行，最后还是问了主题的作者，作者推荐了<a href="https://rmshadows.gitee.io/" target="_blank" rel="noopener">CIVICCCCC</a>的解决方法。非常感谢两位大佬。🙏</p>
+<h2 id="插入数学公式"><a class="header-anchor" href="#插入数学公式">¶</a>插入数学公式</h2>
+<p>按照CIVICCCCC的思路，利用markdown可以解析html的特点，直接在文中嵌入以下一段代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>MathJax example<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://polyfill.io/v3/polyfill.min.js?features=es6"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">id</span>=<span class="string">"MathJax-script"</span> <span class="attr">async</span></span></span><br><span class="line"><span class="tag">            <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are</span><br><span class="line">    \[x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;.\]</span><br><span class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>p标签内按照MathJax的语法正常写数学公式即可。</p>
   <!DOCTYPE html>
   <html>
   <head>
@@ -410,6 +416,10 @@
   </p>
   </body>
   </html>
+<p>同样的也可以插入视频</p>
+<h2 id="插入视频"><a class="header-anchor" href="#插入视频">¶</a>插入视频</h2>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=797031703&amp;bvid=BV1Ey4y1y7Qr&amp;cid=234096629&amp;page=1"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">width</span>=<span class="string">"95%"</span> <span class="attr">height</span>=<span class="string">"600"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 
         <hr>
         <!-- Pager -->
@@ -555,7 +565,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插入数学公式"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">插入数学公式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插入视频"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">插入视频</span></a></li></ol>
         
         </div>
       </aside>
@@ -576,6 +586,8 @@
             <a href="/tags/">FEATURED TAGS</a>
           </h5>
           <div class="tags">
+            
+            <a class="tag" href="/tags/#MathJax" title="MathJax">MathJax</a>
             
           </div>
         </section>
