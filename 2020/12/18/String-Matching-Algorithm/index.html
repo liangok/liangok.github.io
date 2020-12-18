@@ -403,12 +403,14 @@
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
     </script
-    <body></body>
+    <body> $0$|$\O((n-m+1)m)$|</body>
   <meta name="generator" content="Hexo 4.2.1"></head>
   </html>
+<p>When (a \ne 0), there are two solutions to (ax^2 + bx + c = 0) and they are<br>
+[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.]</p>
 <h1>字符串匹配</h1>
-<p>​	字符串匹配有很多用途，比如使用搜索功能查找文本中的一些文字时，就会用到字符串匹配，除此之外，字符串匹配还可以应用于再DNA中搜索特定序列，再网络搜索引擎中查找网页地址。</p>
-<p>​	这里主要介绍四种字符串匹配方法\O(n+m)</p>
+<p>​	字符串匹配有很多用途，比如使用搜索功能查找文本中的一些文字时，就会用到字符串匹配，除此之外，字符串匹配还可以应用于再DNA中搜索特定序列，再网络搜索引擎中查找网页地址。<br>
+​	这里主要介绍四种字符串匹配方法<body></p>
 <table>
 <thead>
 <tr>
@@ -420,13 +422,13 @@
 <tbody>
 <tr>
 <td style="text-align:center">朴素算法</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">\O((n-m+1)m)</td>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$\O((n-m+1)m)$</td>
 </tr>
 <tr>
 <td style="text-align:center">Rabin-Karp</td>
-<td style="text-align:center">\Theta(m)</td>
-<td style="text-align:center">\O((n-m+1)m)</td>
+<td style="text-align:center">$\Theta(m)$</td>
+<td style="text-align:center">$\O((n-m+1)m)$</td>
 </tr>
 <tr>
 <td style="text-align:center">有限自动机算法</td>
@@ -440,6 +442,7 @@
 </tr>
 </tbody>
 </table>
+<p>&lt;\body&gt;</p>
 <p>​	下面首先定义一些符号，用于更方便和准确的介绍接下来将要讲的内容。</p>
 <h2 id="符号和术语"><a class="header-anchor" href="#符号和术语">¶</a>符号和术语</h2>
 <p>​	如果$0\leq s\leq n-m$，并且$T[s+1 … s+m]=P[1…m]$,即$T[s+j]=P[j], 1\leq j\le m$，那么称模式$P$在文本$T$中出现，且偏移量为$s$。如果$P$在$T$中以偏移$s$出现，则称$s$是有效偏移，否则称为无效偏移。而字符串匹配问题就是<strong>找到搜有的有效偏移，使得在该有效偏移下，所给的模式$P$出现在文本$T$中</strong>。</p>
@@ -516,10 +519,6 @@ $$<br>
         <hr>
         <!-- Pager -->
         <ul class="pager">
-          
-          <li class="previous">
-            <a href="/2020/12/18/test/" data-toggle="tooltip" data-placement="top" title="test">&larr; Previous Post</a>
-          </li>
           
           
           <li class="next">
