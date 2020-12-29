@@ -209,13 +209,6 @@
 
           
           <li>
-            <a href="/archive/">Archives</a>
-          </li>
-          
-          
-
-          
-          <li>
             <a href="/about/">About</a>
           </li>
           
@@ -224,6 +217,13 @@
           
           <li>
             <a href="/categories/">Categories</a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a href="/archive/">Archives</a>
           </li>
           
           
@@ -394,7 +394,7 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>前些天一直在尝试各种方法给这个主题按插件，想要让支持MathJax，试了各种方法都不行，最后还是问了主题的作者，作者推荐了<a href="https://rmshadows.gitee.io/" target="_blank" rel="noopener">CIVICCCCC</a>的解决方法。非常感谢两位大佬。🙏</p>
-<h2 id="插入数学公式"><a class="markdownIt-Anchor" href="#插入数学公式"></a> 插入数学公式</h2>
+<h2 id="插入数学公式"><a class="header-anchor" href="#插入数学公式">¶</a>插入数学公式</h2>
 <p>按照CIVICCCCC的思路，利用markdown可以解析html的特点，直接在文中嵌入以下一段代码</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>MathJax example<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://polyfill.io/v3/polyfill.min.js?features=es6"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">id</span>=<span class="string">"MathJax-script"</span> <span class="attr">async</span></span></span><br><span class="line"><span class="tag">            <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are</span><br><span class="line">    \[x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;.\]</span><br><span class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>p标签内按照MathJax的语法正常写数学公式即可。</p>
@@ -417,13 +417,13 @@
   </body>
   </html>
 <p>同样的也可以插入视频</p>
-<h2 id="插入视频"><a class="markdownIt-Anchor" href="#插入视频"></a> 插入视频</h2>
+<h2 id="插入视频"><a class="header-anchor" href="#插入视频">¶</a>插入视频</h2>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=797031703&amp;bvid=BV1Ey4y1y7Qr&amp;cid=234096629&amp;page=1"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">width</span>=<span class="string">"95%"</span> <span class="attr">height</span>=<span class="string">"600"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="后记"><a class="markdownIt-Anchor" href="#后记"></a> 后记</h2>
+<h2 id="后记"><a class="header-anchor" href="#后记">¶</a>后记</h2>
 <p>采用如上的方法不知道为什么，数学公式会被解析两次。摸索了一段时间后我打开了博客目录下<code>./source/node_modules/markdown-it-katex/</code>读了一下README文件，发现只需要在发布的文章中加入下面一句话，并在根目录下的_config.yml打开katex插件就可以正常解析了。</p>
-<h3 id="文章加入"><a class="markdownIt-Anchor" href="#文章加入"></a> 文章加入</h3>
+<h3 id="文章加入"><a class="header-anchor" href="#文章加入">¶</a>文章加入</h3>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="_configyml设置"><a class="markdownIt-Anchor" href="#_configyml设置"></a> _config.yml设置</h3>
+<h3 id="config-yml设置"><a class="header-anchor" href="#config-yml设置">¶</a>_config.yml设置</h3>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">markdown:</span></span><br><span class="line">  <span class="attr">render:</span></span><br><span class="line">    <span class="attr">html:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">breaks:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">linkify:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">typographer:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">quotes:</span> <span class="string">'“”‘’'</span></span><br><span class="line">  <span class="attr">plugins:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-footnote</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-sup</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-sub</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-abbr</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-emoji</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-katex</span>	<span class="comment">#打开katex插件</span></span><br><span class="line">  <span class="attr">anchors:</span></span><br><span class="line">    <span class="attr">level:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">collisionSuffix:</span> <span class="string">'v'</span></span><br><span class="line">    <span class="attr">permalink:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">permalinkClass:</span> <span class="string">header-anchor</span></span><br><span class="line">    <span class="attr">permalinkSymbol:</span> <span class="string">¶</span></span><br></pre></td></tr></table></figure>
 
 
@@ -575,7 +575,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插入数学公式"><span class="toc-nav-number">1.</span> <span class="toc-nav-text"> 插入数学公式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插入视频"><span class="toc-nav-number">2.</span> <span class="toc-nav-text"> 插入视频</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#后记"><span class="toc-nav-number">3.</span> <span class="toc-nav-text"> 后记</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#文章加入"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text"> 文章加入</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#_configyml设置"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text"> _config.yml设置</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插入数学公式"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">插入数学公式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插入视频"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">插入视频</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#后记"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">后记</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#文章加入"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">文章加入</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#config-yml设置"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">_config.yml设置</span></a></li></ol></li></ol>
         
         </div>
       </aside>
