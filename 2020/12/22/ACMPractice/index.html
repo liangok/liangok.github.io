@@ -209,20 +209,6 @@
 
           
           <li>
-            <a href="/archive/">Archives</a>
-          </li>
-          
-          
-
-          
-          <li>
-            <a href="/tags/">Tags</a>
-          </li>
-          
-          
-
-          
-          <li>
             <a href="/about/">About</a>
           </li>
           
@@ -230,7 +216,21 @@
 
           
           <li>
+            <a href="/archive/">Archives</a>
+          </li>
+          
+          
+
+          
+          <li>
             <a href="/categories/">Categories</a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a href="/tags/">Tags</a>
           </li>
           
           
@@ -393,7 +393,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js">
 <h1>HD_Problem 2062</h1>
 <h2 id="题目：Subset-sequence"><a class="header-anchor" href="#题目：Subset-sequence">¶</a>题目：<a href="http://acm.hdu.edu.cn/showproblem.php?pid=2062" target="_blank" rel="noopener">Subset sequence</a></h2>
 <p><strong>题解来源：<a href="https://blog.csdn.net/qq_33266889/article/details/53468509" target="_blank" rel="noopener">HDU 2062 Subset sequence</a></strong></p>
@@ -568,7 +568,7 @@ n*( f(n-1) + 1 )&amp; &amp;, n &gt; 1
 <p>方法二的状态转移方程与方法一实际上是等价的，因为 A 希望尽可能多地拿到石子 和 A 希望进行多地比 B 拿到的石子多 这两者是等价的。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">stoneGameIII</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; stoneValue)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = stoneValue.size();</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">f</span><span class="params">(n + <span class="number">1</span>, INT_MIN)</span></span>;</span><br><span class="line">        <span class="comment">// 边界情况，当没有石子时，分数为 0</span></span><br><span class="line">        f[n] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">            <span class="keyword">int</span> pre = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt;= i + <span class="number">3</span> &amp;&amp; j &lt;= n; ++j) &#123;</span><br><span class="line">                pre += stoneValue[j - <span class="number">1</span>];</span><br><span class="line">                f[i] = max(f[i], pre - f[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (f[<span class="number">0</span>] == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"Tie"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> f[<span class="number">0</span>] &gt; <span class="number">0</span> ? <span class="string">"Alice"</span> : <span class="string">"Bob"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p><strong>注意，石子的堆数是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0...n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathit">n</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span>。</strong></p>
-<h1>Codevs3657</h1>
+<h1>Codevs 3657</h1>
 <h2 id="括号配对问题"><a class="header-anchor" href="#括号配对问题">¶</a>括号配对问题</h2>
 <p>我们用以下规则定义一个合法的括号序列：</p>
 <blockquote>
@@ -768,7 +768,7 @@ n*( f(n-1) + 1 )&amp; &amp;, n &gt; 1
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">HD_Problem 2062</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#题目：Subset-sequence"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">题目：Subset sequence</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">HD_Problem 1087</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#题目：Super-Jumping-Jumping-Jumping"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">题目：Super Jumping! Jumping! Jumping!</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">HD_Problem 1203</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#题目：I-NEED-A-OFFER"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">题目：I NEED A OFFER!</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">HD_Problem 1003</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#题目：Max-Sum"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">题目：Max Sum</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Leetcode 1406</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#题目：石子游戏-III"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">题目：石子游戏 III</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#方法一"><span class="toc-nav-number">5.1.1.</span> <span class="toc-nav-text">方法一</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#方法二：另一种状态的设计思路"><span class="toc-nav-number">5.1.2.</span> <span class="toc-nav-text">方法二：另一种状态的设计思路</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Codevs3657</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#括号配对问题"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">括号配对问题</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">HD_Problem 2062</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#题目：Subset-sequence"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">题目：Subset sequence</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">HD_Problem 1087</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#题目：Super-Jumping-Jumping-Jumping"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">题目：Super Jumping! Jumping! Jumping!</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">HD_Problem 1203</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#题目：I-NEED-A-OFFER"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">题目：I NEED A OFFER!</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">HD_Problem 1003</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#题目：Max-Sum"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">题目：Max Sum</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Leetcode 1406</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#题目：石子游戏-III"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">题目：石子游戏 III</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#方法一"><span class="toc-nav-number">5.1.1.</span> <span class="toc-nav-text">方法一</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#方法二：另一种状态的设计思路"><span class="toc-nav-number">5.1.2.</span> <span class="toc-nav-text">方法二：另一种状态的设计思路</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Codevs 3657</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#括号配对问题"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">括号配对问题</span></a></li></ol></li></ol>
         
         </div>
       </aside>
