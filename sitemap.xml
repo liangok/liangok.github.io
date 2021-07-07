@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://vnv7h3.coding-pages.com/archive/index.html</loc>
+    <loc>https://vnv7h3.coding-pages.com/categories/index.html</loc>
     
     <lastmod>2020-12-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://vnv7h3.coding-pages.com/categories/index.html</loc>
+    <loc>https://vnv7h3.coding-pages.com/archive/index.html</loc>
     
     <lastmod>2020-12-15</lastmod>
     
@@ -165,7 +165,28 @@
   </url>
   
   <url>
+    <loc>https://vnv7h3.coding-pages.com/tags/Hexo/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://vnv7h3.coding-pages.com/tags/Hexo-Theme-LiveMyLife/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://vnv7h3.coding-pages.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://vnv7h3.coding-pages.com/tags/%E8%AF%BB%E4%B9%A6/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -186,28 +207,14 @@
   </url>
   
   <url>
-    <loc>https://vnv7h3.coding-pages.com/tags/%E8%AF%BB%E4%B9%A6/</loc>
-    <lastmod>2021-07-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://vnv7h3.coding-pages.com/tags/Hexo/</loc>
-    <lastmod>2021-07-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://vnv7h3.coding-pages.com/tags/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2021-07-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://vnv7h3.coding-pages.com/tags/MathJax/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://vnv7h3.coding-pages.com/tags/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -229,13 +236,6 @@
   
   <url>
     <loc>https://vnv7h3.coding-pages.com/tags/JavaWeb/</loc>
-    <lastmod>2021-07-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://vnv7h3.coding-pages.com/tags/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -265,14 +265,14 @@
   </url>
   
   <url>
-    <loc>https://vnv7h3.coding-pages.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://vnv7h3.coding-pages.com/categories/Hexo-Theme-LiveMyLife/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://vnv7h3.coding-pages.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</loc>
+    <loc>https://vnv7h3.coding-pages.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -286,7 +286,7 @@
   </url>
   
   <url>
-    <loc>https://vnv7h3.coding-pages.com/categories/Hexo-Theme-LiveMyLife/</loc>
+    <loc>https://vnv7h3.coding-pages.com/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -294,6 +294,13 @@
   
   <url>
     <loc>https://vnv7h3.coding-pages.com/categories/MathJax/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://vnv7h3.coding-pages.com/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -308,13 +315,6 @@
   
   <url>
     <loc>https://vnv7h3.coding-pages.com/categories/Java/</loc>
-    <lastmod>2021-07-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://vnv7h3.coding-pages.com/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
